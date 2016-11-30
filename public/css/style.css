@@ -1,0 +1,146 @@
+
+body {
+    background-color: #b5b5b5;
+    color: #4F4F4F;
+}
+
+.navbar {
+    background-color: #4F4F4F;
+    font-size: 200%;
+    padding-top: 15px;
+}
+
+.navbar-default {
+    border-color: #4F4F4F;
+}
+
+.container-fluid {
+    padding-bottom: 15px;
+}
+
+.container-fluid > h2 {
+    display: inline;
+    padding: 0 30px;
+}
+
+a {
+    color: #ff9900;
+    text-decoration: none;
+}
+
+a:focus, a:hover {
+    color: #B26B00;
+    text-decoration: underline;
+}
+
+/*form and panel changes*/
+
+.panel-warning {
+    border: 5px solid #ff9900;
+    box-shadow: 15px 15px 0 rgba(79, 47, 0, 0.3);
+    border-radius: 15px;
+}
+
+.panel-warning > .panel-heading {
+    color: #4F4F4F;
+    background-color: #ff9900;
+    border-color: #ff9900;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.form-control {
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.form-group {
+    font-size: 18px;
+}
+
+.second-form-body {
+    border-top: 5px solid #ff9900;
+}
+
+.h5-display {
+    display: inline-block;
+}
+
+/*default button changes*/
+
+.btn-warning {
+    color: white;
+    background-color: #ff9900;
+    border: 2px solid #E58A00;
+    border-radius: 15px;
+    box-shadow: 6px 7px 0 rgba(79, 47, 0, 0.3);
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.btn-primary:active {
+    background-color: #B26B00;
+    border-color: #B26B00;
+    font-weight: 600;
+}
+
+.btn-warning:hover {
+    color: #fff;
+    background-color: #B26B00;
+    border-color: #B26B00;
+}
+
+.well {
+    border-radius: 15px;
+    border: 5px solid #4F4F4F;
+    box-shadow: 10px 10px 0 rgba(79, 47, 0, 0.3);
+}
+
+.my-btn-shadow {
+    box-shadow: 10px 10px 0 rgba(79, 47, 0, 0.3);
+    margin: 1px 20px;
+}
+
+.btn-primary {
+    background-color: #0091FF;
+    border-color: #0066B2;
+}
+
+.btn-primary:hover {
+    background-color: #0066B2;
+    border-color: #0066B2;
+}
+
+.btn-group-lg>.btn, .btn-lg {
+
+    border-radius: 15px;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #FF5100;
+    border-color: #CC4100;
+}
+
+.btn-default {
+    color: white;
+    background-color: #6B6B6B;
+    border-color: #4F4F4F;
+}
+
+.btn-default:hover {
+    color: white;
+    background-color: #4F4F4F;
+    border-color: #4F4F4F;
+}
+
+ .btn:active:focus, .btn:focus {
+     outline: none;
+     outline-offset: 0;
+}
+
+ .panel-height {
+     height: 50px;
+ }

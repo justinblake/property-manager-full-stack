@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="panel panel-warning">
+            <div class="panel-heading text-center">Account Information</div>
+            <div class="panel-body register-pad">
+
+                <div ng-if="!showEditableFields">
+                    <div class="form-group">
+                        <label for="firstName">First Name: </label>
+                        <h4 class="h5-display" id="firstName">{{userInfo.firstName}}</h4>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name: </label>
+                        <h4 class="h5-display" id="lastName">{{userInfo.lastName}}</h4>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username: </label>
+                        <h4 class="h5-display" id="username">{{userInfo.username}}</h4>
+                    </div>
+                </div>
+
+                <div ng-if="showEditableFields">
+                    <div class="form-group">
+                        <label for="editFirstName">First Name: </label>
+                        <input class="form-control" id="editFirstName" placeholder="{{userInfo.firstName}}"
+                               ng-model="userInfo.firstName">
+                    </div>
+                    <div class="form-group">
+                        <label for="editLastName">Last Name: </label>
+                        <input class="form-control" id="editLastName" placeholder="{{userInfo.lastName}}"
+                               ng-model="userInfo.lastName">
+                    </div>
+                    <div class="form-group">
+                        <label for="editUsername">Username: </label>
+                        <input class="form-control" id="editUsername" placeholder="{{userInfo.username}}"
+                               ng-model="userInfo.username">
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button ng-show="!showEditableFields" class="btn btn-primary btn-lg my-btn-shadow"
+                            ng-click="showEditableFields = true">EDIT
+                    </button>
+                    <button class="btn btn-lg btn-default my-btn-shadow"
+                            ng-click="updateSpecificUser(userInfo); showEditableFields = false"
+                            ng-show="showEditableFields">SAVE
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>

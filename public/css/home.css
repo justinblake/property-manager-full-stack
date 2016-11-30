@@ -1,0 +1,36 @@
+
+.home-btn {
+    color: white;
+    background-color: #ff9900;
+    border: 2px solid #E58A00;
+    height: 100%;
+    width: 80%;
+    font-size: 80px;
+    box-shadow: 15px 15px 0 rgba(79, 47, 0, 0.3);
+    border-radius: 15px;
+}
+
+.home-btn:hover {
+    color: #fff;
+    background-color: #B26B00;
+    border-color: #B26B00;
+}
+
+.home-btn:active {
+    background-color: #B26B00;
+    border-color: #B26B00;
+}
+
+.home-btn:hover {
+    background-color: #B26B00;
+    border-color: #B26B00;
+}
+
+.home-btn:focus {
+    background-color: #B26B00;
+    border-color: #B26B00;
+}
+
+.row-margins {
+        margin: 30px 10px;
+}

@@ -1,0 +1,12 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid text-center">
+        <h2><a href="#/">Home</a></h2>
+        <h2><a href="#/listings">Listings</a></h2>
+        <h2><a href="#/account">Account</a></h2>
+        <h2><a href="#/property">Properties</a></h2>
+        <h2 ng-hide="UserService.isAuthenticated()"><a href="#/login">Login</a></h2>
+
+        <h2 ng-hide="UserService.isAuthenticated()"><a href="#/register">Register</a></h2>
+        <h2 ng-show="UserService.isAuthenticated()"><a href="#/logout">Logout</a></h2>
+    </div>
+</nav>

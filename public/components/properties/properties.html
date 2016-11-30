@@ -1,0 +1,350 @@
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="col-md-5 well text-center">
+            <div class="col-md-12">
+                <label for="newProperty" class="click-here-btns-text">Register A New Property</label>
+            </div>
+            <div class="col-md-12">
+                <button id="newProperty" class="btn btn-warning btn-lg click-here-btns"
+                        ng-click="registerNew = !registerNew">CLICK HERE
+                </button>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-5 well text-center">
+            <div class="col-md-12">
+                <label for="seeAllProperties" class="click-here-btns-text">See All Properties</label>
+            </div>
+            <div class="col-md-12">
+                <button id="seeAllProperties" class="btn btn-warning btn-lg click-here-btns"
+                        ng-click="showMyProperties = !showMyProperties">CLICK HERE
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+
+<!--create new property box-->
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div ng-if="!registerNew" class="panel panel-warning">
+            <div class="panel-heading text-center">Create A New Rental Property</div>
+            <form class="form-horizontal">
+                <div class="panel-body register-pad">
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <label for="streetAddress">Street Address</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input class="form-control" id="streetAddress" ng-model="newProp.address.streetAddress">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <label for="city">City</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input class="form-control" id="city" ng-model="newProp.address.city">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <label for="state">State</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input class="form-control" id="state" ng-model="newProp.address.state">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <label for="zip">Zip Code</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input class="form-control" id="zip" ng-model="newProp.address.zip">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="panel-body register-pad second-form-body">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <label for="squareFeet">Square Feet</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input class="form-control" id="squareFeet" ng-model="newProp.squareFeet">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <label for="bedrooms">Bedrooms</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input class="form-control" id="bedrooms" ng-model="newProp.bedrooms">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <label for="bathrooms">Bathrooms</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input class="form-control" id="bathrooms" ng-model="newProp.bathrooms">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <label for="kitchen">Kitchen</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input class="form-control" id="kitchen" ng-model="newProp.kitchen">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <label for="entertainment">Entertainment</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input class="form-control" id="entertainment" ng-model="newProp.entertainment">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <label for="wifi">Wifi</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input class="form-control" id="wifi" ng-model="newProp.wifi">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <label for="backyard">Backyard</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input class="form-control" id="backyard" ng-model="newProp.backyard">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <label for="extras">Extras</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input class="form-control" id="extras" ng-model="newProp.extras">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <label for="imgUrl">Image Url</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input class="form-control" id="imgUrl" ng-model="newProp.imgUrl">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 text-center">
+                        <button class="btn btn-warning btn-lg" ng-click="saveNewProp(newProp)">SAVE</button>
+                    </div>
+
+                </div>
+
+
+            </form>
+        </div>
+
+    </div>
+    <div class="col-md-2"></div>
+</div>
+
+</div>
+
+<!--show all properties boxes-->
+
+<div class="row" ng-if="!showMyProperties">
+    <div class="col-md-4" ng-repeat="property in allProperties track by $index">
+        <div class="container-fluid ">
+            <div class="panel panel-warning">
+                <div class="panel-heading text-center panel-padding">
+                    <button ng-show="!showEditableFields" class="btn btn-primary btn-lg my-btn-shadow"
+                            ng-click="showEditableFields = true">EDIT
+                    </button>
+                    <button class="btn btn-lg btn-default my-btn-shadow"
+                            ng-click="updateSpecificProperty($index, allProperties[$index]); showEditableFields = false"
+                            ng-show="showEditableFields">SAVE
+                    </button>
+                    <button class="btn btn-lg btn-danger my-btn-shadow"
+                            ng-click="deleteSpecificProperty(allProperties[$index])">DELETE
+                    </button>
+                </div>
+
+                <!--Default fields shown on load-->
+
+                <div class="panel-body" ng-if="!showEditableFields">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="defaultStreet">Street Address: </label>
+                            <h4 class="h5-display" id="defaultStreet">{{property.address.streetAddress}}</h4>
+                        </div>
+                        <div class="form-group">
+                            <label for="defaultCity">City: </label>
+                            <h4 class="h5-display" id="defaultCity">{{property.address.city}}</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="defaultState">State: </label>
+                            <h4 class="h5-display" id="defaultState">{{property.address.state}}</h4>
+                        </div>
+                        <div class="form-group">
+                            <label for="defaultZip">Zip: </label>
+                            <h4 class="h5-display" id="defaultZip">{{property.address.zip}}</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6"></div>
+                </div>
+                <div class="panel-body second-form-body" ng-if="!showEditableFields">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="defaultSquare">Square Feet:</label>
+                            <h4 class="h5-display" id="defaultSquare">{{property.squareFeet}}</h4>
+                        </div>
+                        <div class="form-group">
+                            <label for="defaultBedrooms">Bedrooms: </label>
+                            <h4 class="h5-display" id="defaultBedrooms">{{property.bedrooms}}</h4>
+                        </div>
+                        <div class="form-group">
+                            <label for="defaultBathrooms">Bathrooms:</label>
+                            <h4 class="h5-display" id="defaultBathrooms">{{property.bathrooms}}</h4>
+                        </div>
+                        <div class="form-group">
+                            <label for="defaultKitchen">Kitchen: </label>
+                            <h4 class="h5-display" id="defaultKitchen">{{property.kitchen}}</h4>
+                        </div>
+                        <div class="form-group">
+                            <label for="defaultEnt">Amenities: </label>
+                            <h4 class="h5-display" id="defaultEnt">{{property.entertainment}}</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="defaultWifi">Wifi: </label>
+                            <h4 class="h5-display" id="defaultWifi">{{property.wifi}}</h4>
+                        </div>
+                        <div class="form-group">
+                            <label for="defaultBackyard">Backyard: </label>
+                            <h4 class="h5-display" id="defaultBackyard">{{property.backyard}}</h4>
+                        </div>
+                        <div class="form-group">
+                            <label for="defaultExtras">Extras: </label>
+                            <h4 class="h5-display" id="defaultExtras">{{property.extras}}</h4>
+                        </div>
+                        <div class="form-group">
+                            <label for="defaultImage">Image URL: </label>
+                            <h4 class="h5-display" id="defaultImage">{{property.imageUrl}}</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Show editable fields-->
+
+                <div class="panel-body" ng-if="showEditableFields">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="editStreet">Street Address: </label>
+                            <input class="form-control" id="editStreet" placeholder="{{property.address.streetAddress}}"
+                                   ng-model="allProperties[$index].address.streetAddress">
+                        </div>
+                        <div class="form-group">
+                            <label for="editCity">City: </label>
+                            <input class="form-control" id="editCity" placeholder="{{property.address.city}}"
+                                   ng-model="allProperties[$index].address.city">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="editState">State: </label>
+                            <input class="form-control" id="editState" placeholder="{{property.address.state}}"
+                                   ng-model="allProperties[$index].address.state">
+                        </div>
+                        <div class="form-group">
+                            <label for="editZip">Zip: </label>
+                            <input class="form-control" id="editZip" placeholder="{{property.address.zip}}"
+                                   ng-model="allProperties[$index].address.zip">
+                        </div>
+                    </div>
+                    <div class="col-md-6"></div>
+                </div>
+                <div class="panel-body second-form-body" ng-if="showEditableFields">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="editSquareFeet">Square Feet: </label>
+                            <input class="form-control" id="editSquareFeet" placeholder="{{property.squareFeet}}"
+                                   ng-model="allProperties[$index].squareFeet">
+                        </div>
+                        <div class="form-group">
+                            <label for="editBedrooms">Bedrooms: </label>
+                            <input class="form-control" id="editBedrooms" placeholder="{{property.bedrooms}}"
+                                   ng-model="allProperties[$index].bedrooms">
+                        </div>
+                        <div class="form-group">
+                            <label for="editBathrooms">Bathrooms: </label>
+                            <input class="form-control" id="editBathrooms" placeholder="{{property.bathrooms}}"
+                                   ng-model="allProperties[$index].bathrooms">
+                        </div>
+                        <div class="form-group">
+                            <label for="editKitchen">Kitchen: </label>
+                            <input class="form-control" id="editKitchen" placeholder="{{property.kitchen}}"
+                                   ng-model="allProperties[$index].kitchen">
+                        </div>
+                        <div class="form-group">
+                            <label for="editEntertainment">Amenities: </label>
+                            <input class="form-control" id="editEntertainment" placeholder="{{property.entertainment}}"
+                                   ng-model="allProperties[$index].entertainment">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="editWifi">Wifi: </label>
+                            <input class="form-control" id="editWifi" placeholder="{{property.wifi}}"
+                                   ng-model="allProperties[$index].wifi">
+                        </div>
+                        <div class="form-group">
+                            <label for="editBackyard">Backyard: </label>
+                            <input class="form-control" id="editBackyard" placeholder="{{property.backyard}}"
+                                   ng-model="allProperties[$index].backyard">
+                        </div>
+                        <div class="form-group">
+                            <label for="editExtras">Extras: </label>
+                            <input class="form-control" id="editExtras" placeholder="{{property.extras}}"
+                                   ng-model="allProperties[$index].extras">
+                        </div>
+                        <div class="form-group">
+                            <label for="editImageUrl">Image Url: </label>
+                            <input class="form-control" id="editImageUrl" placeholder="{{property.imageUr}}"
+                                   ng-model="allProperties[$index].imageUrl">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--google maps api-->
+
+
+
+
+

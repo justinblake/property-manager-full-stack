@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-xs-1 col-sm-2 col-md-4 "></div>
+    <div class="col-xs-10 col-sm-8 col-md-5 col-lg-3">
+        <div class="panel panel-warning">
+            <div class="panel-heading text-center">Login</div>
+            <div class="panel-body register-pad">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="username"
+                               class="col-sm-3 col-md-5 col-lg-4 control-label label-pad">Username</label>
+                        <div class="col-sm-8 col-md-6 col-lg-7 ">
+                            <input class="form-control" id="username" ng-model="returnUser.username">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password"
+                               class="col-sm-3 col-md-5 col-lg-4 control-label label-pad">Password</label>
+                        <div class="col-sm-8 col-md-6 col-lg-7 ">
+                            <input class="form-control" type="password" id="password" ng-model="returnUser.password">
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <button class="btn btn-warning btn-lg" ng-click="login(returnUser)">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
